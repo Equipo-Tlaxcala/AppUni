@@ -9,7 +9,7 @@ class CardTable extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            _SigleCard( color: Colors.blue,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwBL9ASvi5AO3uTEQvXgqQM-Vxrv8JPjrGg&s', text: 'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital' ),
+            _SigleCard( color: Colors.blue,image: 'https://upqroo.edu.mx/wp-content/uploads/2024/01/undraw_Developer_activity_re_39tg.png', text: 'Ingenieria En Software' ),
             
             _SigleCard( color: Colors.pinkAccent,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaMOvuwsfNZweOm_YX1o-Ia_QyRUqwJpVTDw&s',  text: 'Ingenieria en Biomedica' ),
           ]
@@ -63,7 +63,9 @@ class _SigleCard extends StatelessWidget {
             builder: (context) => Scaffold(
               appBar: AppBar(
                 title: Text(text),
+                backgroundColor: Color.fromRGBO(62, 66, 107, 0.9),
               ),
+              backgroundColor: Color.fromRGBO(55, 57, 84, 1.0),
               body: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -75,8 +77,21 @@ class _SigleCard extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
+                      child: Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(62, 66, 107, 0.7),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 15,
+                              offset: Offset(0, 5),
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          children: [
                           Text(
                             text,
                             style: TextStyle(
@@ -105,6 +120,8 @@ class _SigleCard extends StatelessWidget {
                           _buildCurriculumMap(text),
                         ],
                       ),
+                          
+                          ),
                     ),
                   ],
                 ),
@@ -127,7 +144,7 @@ class _SigleCard extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.transparent,
+                  const Color.fromARGB(0, 0, 0, 0),
                   Color.fromRGBO(62, 66, 107, 0.9),
                 ],
               ),
@@ -151,7 +168,7 @@ class _SigleCard extends StatelessWidget {
 
   String _getCareerDescription(String careerName) {
     Map<String, String> descriptions = {
-      'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital': 
+      'Ingenieria En Software': 
         'En la carrera de Ingeniería en Software, el profesionista estará facultado para diseñar, desarrollar y mejorar la calidad de productos de software; especificar los métodos y las herramientas para aumentar la productividad de los desarrolladores de software; controlar los procesos de manera eficiente; aplicar los estándares internacionales para construir software de alta calidad.\n\n'
         'Objetivo:\nAplicar métodos y técnicas para resolver los problemas de construcción y de proyectos informáticos, específicamente de desarrollo de software, utilizando normas, metodologías, procedimientos y herramientas modernas y estandarizadas.\n\n'
         'Perfil de Ingreso:\nLos alumnos interesados en ingresar a la Ingeniería en Software deberán cumplir con:\n'
@@ -178,7 +195,7 @@ class _SigleCard extends StatelessWidget {
   // Función para obtener el mapa curricular de una carrera
   Map<String, Map<String, List<String>>> _getCurriculumMap() {
     Map<String, Map<String, List<String>>> curriculumMap = {
-      'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital': {
+      'Ingenieria En Software': {
         'Primer Cuatrimestre': [
           '1. INGLÉS I',
           '2. DESARROLLO HUMANO Y VALORES',
@@ -190,83 +207,72 @@ class _SigleCard extends StatelessWidget {
         ],
         'Segundo Cuatrimestre': [
           '1. INGLÉS II',
-          '2. CÁLCULO DIFERENCIAL',
-          '3. PROGRAMACIÓN ORIENTADA A OBJETOS',
-          '4. ARQUITECTURA DE COMPUTADORAS',
-          '5. ÁLGEBRA LINEAL',
-          '6. METODOLOGÍA DE LA INVESTIGACIÓN'
+          '2. HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS',
+          '3. CÁLCULO DIFERENCIAL',
+          '4. CONMUTACIÓN Y ENRUTAMIENTO DE REDES',
+          '5. PROBABILIDAD Y ESTADÍSTICA',
+          '6. PROGRAMACIÓN ESTRUCTURADA',
+          '7. SISTEMAS OPERATIVOS'
         ],
         'Tercer Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS III',
+          '2. DESARROLLO DELPENSAMIENTO Y TOMA DE DECISIONES',
+          '3. CÁLCULO INTEGRAL',
+          '4. TÓPICOS DE CALIDAD PARA EL DISEÑO DE SOFTWARE',
+          '5. BASES DE DATOS',
+          '6. PROGRAMACIÓN ORIENTADA A OBJETOS',
+          '7. PROYECTO INTEGRADOR I'
         ],
         'Cuarto Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS IV',
+          '2. ÉTICA PROFESIONAL',
+          '3. CÁLCULO DE VARIAS VARIABLES',
+          '4. APLICACIONES WEB',
+          '5. ESTRUCTURA DE DATOS',
+          '6. DESARROLLO DE APLICACIONES MÓVILES',
+          '7. ANÁLISIS Y DISEÑO DE SOFTWARE'
         ],
         'Quinto Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS V',
+          '2. LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO',
+          '3. ECUACIONES DIFERENCIALES',
+          '4. APLICACIONES WEB ORIENTADAS A SERVICIOS',
+          '5. BASES DE DATOS AVANZADAS',
+          '6. ESTÁNDARES Y MÉTRICAS PARA EL DESARROLLO DE SOFTWARE',
+          '7. PROYECTO INTEGRADOR II'
         ],
         'Sexto Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. ESTADÍA TÉCNICO SUPERIOR UNIVERSITARIO EN DESARROLLO DE SOFTWARE MULTIPLATAFORMA'
         ],
         'Séptimo Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS VI',
+          '2. HABILIDADES GERENCIALES',
+          '3. FORMULACIÓN DE PROYECTOS DE TECNOLOGÍA',
+          '4. FUNDAMENTOS DE INTELIGENCIA ARTIFICIAL',
+          '5. ÉTICA Y LEGISLACIÓN EN TECNOLOGÍAS DE LA INFORMACIÓN',
+          '6. OPTATIVA I',
+          '7. SEGURIDAD INFORMÁTICA'
         ],
         'Octavo Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS VII',
+          '2. ELECTRÓNICA DIGITAL',
+          '3. GESTIÓN DE PROYECTOS DE TECNOLOGÍA',
+          '4. PROGRAMACIÓN PARA INTELIGENCIA ARTIFICIAL',
+          '5. ADMINISTRACIÓN DE SERVIDORES',
+          '6. OPTATIVA II',
+          '7. INFORMÁTICA FORENSE'
         ],
         'Noveno Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. INGLÉS VIII',
+          '2. INTERNET DE LAS COSAS',
+          '3. EVALUACIÓN DE PROYECTOS DE TECNOLOGÍA',
+          '4. CIENCIA DE DATOS',
+          '5. TECNOLOGÍAS DISRUPTIVAS',
+          '6. OPTATIVA III',
+          '7. PROYECTO INTEGRADOR III'
         ],
         'Décimo Cuatrimestre': [
-          '1. INGLÉS I',
-          '2. DESARROLLO HUMANO Y VALORES',
-          '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. FUNDAMENTOS DE REDES',
-          '5. FÍSICA',
-          '6. FUNDAMENTOS DE PROGRAMACIÓN',
-          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+          '1. ESTADÍA LICENCIATURA EN INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN E INNOVACIÓN DIGITAL',
         ],
       },
       'Ingenieria en Biomedica': {
