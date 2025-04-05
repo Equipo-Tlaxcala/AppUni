@@ -9,7 +9,7 @@ class CardTable extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            _SigleCard( color: Colors.blue,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwBL9ASvi5AO3uTEQvXgqQM-Vxrv8JPjrGg&s', text: 'Ingenieria en Software' ),
+            _SigleCard( color: Colors.blue,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwBL9ASvi5AO3uTEQvXgqQM-Vxrv8JPjrGg&s', text: 'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital' ),
             
             _SigleCard( color: Colors.pinkAccent,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaMOvuwsfNZweOm_YX1o-Ia_QyRUqwJpVTDw&s',  text: 'Ingenieria en Biomedica' ),
           ]
@@ -91,6 +91,18 @@ class _SigleCard extends StatelessWidget {
                             style: TextStyle(fontSize: 16),
                             textAlign: TextAlign.justify,
                           ),
+                          SizedBox(height: 24),
+                          // Add curriculum map section
+                          Text(
+                            "Mapa Curricular",
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.brown,
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                          _buildCurriculumMap(text),
                         ],
                       ),
                     ),
@@ -139,7 +151,21 @@ class _SigleCard extends StatelessWidget {
 
   String _getCareerDescription(String careerName) {
     Map<String, String> descriptions = {
-      'Ingenieria en Software': 'La Ingeniería en Software se enfoca en el desarrollo sistemático de programas y aplicaciones, abarcando análisis, diseño, implementación y mantenimiento de sistemas computacionales. Los graduados están preparados para crear soluciones tecnológicas innovadoras.',
+      'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital': 
+        'En la carrera de Ingeniería en Software, el profesionista estará facultado para diseñar, desarrollar y mejorar la calidad de productos de software; especificar los métodos y las herramientas para aumentar la productividad de los desarrolladores de software; controlar los procesos de manera eficiente; aplicar los estándares internacionales para construir software de alta calidad.\n\n'
+        'Objetivo:\nAplicar métodos y técnicas para resolver los problemas de construcción y de proyectos informáticos, específicamente de desarrollo de software, utilizando normas, metodologías, procedimientos y herramientas modernas y estandarizadas.\n\n'
+        'Perfil de Ingreso:\nLos alumnos interesados en ingresar a la Ingeniería en Software deberán cumplir con:\n'
+        '1. Bachillerato terminado en cualquiera de sus modalidades (General, Técnico ó Propedéutico en Ciencias Físico-Matemáticas).\n'
+        '2. Amplio sentido de responsabilidad, orden y disciplina.\n'
+        '3. Conocimientos básicos sobre computación y razonamiento lógico matemático.\n\n'
+        'Perfil de Egreso:\nEl Ingeniero en Software egresado de las Universidades Politécnicas, tiene una formación integral basada en competencias, con conocimientos, actitudes, habilidades y destrezas para automatizar procesos mediante el diseño, desarrollo o actualización de sistemas de software, lo que le permite interactuar en diferentes campos de acción y desempeñarse mejor en la empresa, institución u organizaron pública o privada de los sectores industrial, comercial y de servicios; en la áreas de:\n'
+        '1. Diseño y desarrollo de software a la medida y/o genérico de calidad.\n'
+        '2. Gestión, administración e implantación de proyectos de innovación el área de software.\n'
+        '3. Integración de nuevas soluciones de software a servicios modernos como el comercio electrónico.\n'
+        '4. Diseño y creación de bases de datos y aplicaciones para su manipulación.\n'
+        '5. Soporte técnico y estratégico a la infraestructura de tecnologías de información.\n'
+        '6. Investigación en el campo del desarrollo y reingeniería de las tecnologías de la información.\n\n'
+        'Modalidad: Cuatrimestre\nDuración: 3 años y 4 meses',
       'Ingenieria en Biomedica': 'La Ingeniería Biomédica combina principios de ingeniería con ciencias médicas para desarrollar tecnologías y dispositivos que mejoren la atención médica y la calidad de vida de los pacientes.',
       'Ingenieria Finaciera': 'La Ingeniería Financiera aplica herramientas matemáticas y computacionales para resolver problemas financieros complejos, incluyendo gestión de riesgos, inversiones y optimización de portafolios.',
       'Licenciatura en Administracion y Gestion Empresarial': 'Esta carrera forma profesionales capaces de gestionar organizaciones, optimizar recursos y desarrollar estrategias empresariales efectivas para el crecimiento y sostenibilidad de las empresas.',
@@ -147,6 +173,212 @@ class _SigleCard extends StatelessWidget {
       'Licenciatura en Terapia Fisica': 'La Terapia Física se especializa en la rehabilitación y tratamiento de lesiones y condiciones que afectan el movimiento humano, promoviendo la recuperación y el bienestar físico de los pacientes.',
     };
     return descriptions[careerName] ?? 'Descripción no disponible';
+  }
+  
+  // Función para obtener el mapa curricular de una carrera
+  Map<String, Map<String, List<String>>> _getCurriculumMap() {
+    Map<String, Map<String, List<String>>> curriculumMap = {
+      'Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Segundo Cuatrimestre': [
+          '1. INGLÉS II',
+          '2. CÁLCULO DIFERENCIAL',
+          '3. PROGRAMACIÓN ORIENTADA A OBJETOS',
+          '4. ARQUITECTURA DE COMPUTADORAS',
+          '5. ÁLGEBRA LINEAL',
+          '6. METODOLOGÍA DE LA INVESTIGACIÓN'
+        ],
+        'Tercer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Cuarto Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Quinto Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Sexto Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Séptimo Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Octavo Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Noveno Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+        'Décimo Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ],
+      },
+      'Ingenieria en Biomedica': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. BIOLOGÍA CELULAR',
+          '5. FÍSICA',
+          '6. QUÍMICA'
+        ]
+      },
+      'Ingenieria Finaciera': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ]
+      },
+      'Licenciatura en Administracion y Gestion Empresarial': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ]
+      },
+      'Ingenieria en Biotecnologia': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ]
+      },
+      'Licenciatura en Terapia Fisica': {
+        'Primer Cuatrimestre': [
+          '1. INGLÉS I',
+          '2. DESARROLLO HUMANO Y VALORES',
+          '3. FUNDAMENTOS MATEMÁTICOS',
+          '4. FUNDAMENTOS DE REDES',
+          '5. FÍSICA',
+          '6. FUNDAMENTOS DE PROGRAMACIÓN',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
+        ]
+      },
+    };
+    
+    return curriculumMap;
+  }
+  
+  // Helper method to get curriculum for a specific career
+  Map<String, List<String>> getCurriculumForCareer(String careerName) {
+    final allCurriculums = _getCurriculumMap();
+    return allCurriculums[careerName] ?? {};
+  }
+  
+  // Add the _buildCurriculumMap method inside the _SigleCard class
+  Widget _buildCurriculumMap(String careerName) {
+    final curriculum = getCurriculumForCareer(careerName);
+    
+    if (curriculum.isEmpty) {
+      return Text('Mapa curricular no disponible');
+    }
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: curriculum.entries.map((entry) {
+        final quarter = entry.key;
+        final subjects = entry.value;
+        
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              margin: EdgeInsets.only(bottom: 8),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                quarter,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ...subjects.map((subject) => Padding(
+              padding: EdgeInsets.only(left: 16, bottom: 4),
+              child: Text(
+                subject,
+                style: TextStyle(fontSize: 16),
+              ),
+            )).toList(),
+            SizedBox(height: 16),
+          ],
+        );
+      }).toList(),
+    );
   }
 }
 
