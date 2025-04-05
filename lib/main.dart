@@ -4,7 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:disenos/screens/basic_design.dart';
 import 'package:disenos/screens/scroll_design.dart';
 import 'package:disenos/screens/home_screen.dart';
- 
+import 'package:disenos/screens/biotecnologia_screen.dart';  // Agregar esta línea
+
 void main() => runApp(MyApp());
  
 class MyApp extends StatelessWidget {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         'basic_design' : ( _ ) => BasicDesignScreen(),
         'scroll_screen': ( _ ) => ScrollScreen(), 
-        'home_screen'  : ( _ ) => HomeScreen(), 
+        'home_screen'  : ( _ ) => HomeScreen(),
+        'biotecnologia_screen': ( _ ) => BiotecnologiaScreen(),  // Agregar esta línea
       },
     );
   }
