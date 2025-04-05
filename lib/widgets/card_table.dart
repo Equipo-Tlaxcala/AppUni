@@ -24,7 +24,15 @@ class CardTable extends StatelessWidget {
 
         TableRow(
           children: [
-            _SigleCard( color: Colors.deepPurple, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-T_rwqJdmGQKrxBIIX2fj-_5Y-YH0gLjNZQ&s', text: 'Ingenieria en Biotecnologia' ),
+            // En la parte donde tienes la card de Biotecnología
+            _SigleCard(
+              color: Colors.deepPurple,
+              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-T_rwqJdmGQKrxBIIX2fj-_5Y-YH0gLjNZQ&s',
+              text: 'Ingenieria en Biotecnologia',
+              onTap: () {
+                Navigator.pushNamed(context, 'biotecnologia_screen');
+              },
+            ),
             _SigleCard( color: Colors.pinkAccent,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaa9G4WC3qX0CipEI8u8MXaA6C9Z6jyr9zbA&s', text: 'Licenciatura en Terapia Fisica' ),
           ]
         ),
@@ -41,22 +49,23 @@ class CardTable extends StatelessWidget {
 
 
 class _SigleCard extends StatelessWidget {
-
   final String image;
   final Color color;
   final String text;
+  final Function()? onTap;  // Agregar esta línea
 
   const _SigleCard({
     Key? key,
     required this.image,
     required this.color,
-    required this.text
+    required this.text,
+    this.onTap,  // Agregar esta línea
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
+      onTap: onTap ?? () {  // Modificar esta línea
         Navigator.push(
           context,
           MaterialPageRoute(
