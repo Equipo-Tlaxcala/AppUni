@@ -30,10 +30,9 @@ class CardTable extends StatelessWidget {
 
         TableRow(
           children: [
-            // En la parte donde tienes la card de Biotecnología
             _SigleCard(
               color: Colors.deepPurple,
-              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-T_rwqJdmGQKrxBIIX2fj-_5Y-YH0gLjNZQ&s',
+              image: 'lib/img/bioP.jpg',
               text: 'Ingenieria en Biotecnologia',
               onTap: () {
                 Navigator.pushNamed(context, 'biotecnologia_screen');
