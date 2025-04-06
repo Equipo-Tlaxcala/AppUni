@@ -1,10 +1,12 @@
+import 'package:disenos/screens/uni_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:disenos/screens/basic_design.dart';
 import 'package:disenos/screens/scroll_design.dart';
 import 'package:disenos/screens/home_screen.dart';
-import 'package:disenos/screens/biotecnologia_screen.dart';  // Agregar esta línea
+import 'package:disenos/screens/biotecnologia_screen.dart';
+import 'package:disenos/screens/software_screen.dart';
 
 void main() => runApp(MyApp());
  
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
         'basic_design' : ( _ ) => BasicDesignScreen(),
         'scroll_screen': ( _ ) => ScrollScreen(), 
         'home_screen'  : ( _ ) => HomeScreen(),
-        'biotecnologia_screen': ( _ ) => BiotecnologiaScreen(),  // Agregar esta línea
+        'biotecnologia_screen': ( _ ) => BiotecnologiaScreen(), 
+        'software_screen': (_) => SoftwareScreen(), // Agregar esta línea
+        'uni_info_screen':(_) => UniInfoScreen(),
       },
     );
   }
