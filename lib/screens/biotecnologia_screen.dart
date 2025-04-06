@@ -5,7 +5,17 @@ class BiotecnologiaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ingeniería en Biotecnología'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Ingeniería en Biotecnología'),
+            Image.asset(
+              'lib/img/images.png',
+              height: 100,
+              width: 100,
+            ),
+          ],
+        ),
         backgroundColor: Color.fromRGBO(62, 66, 107, 0.9),
       ),
       backgroundColor: Color.fromRGBO(55, 57, 84, 1.0),
