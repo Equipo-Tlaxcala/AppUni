@@ -38,12 +38,17 @@ class CardTable extends StatelessWidget {
                 Navigator.pushNamed(context, 'biotecnologia_screen');
               },
             ),
-            _SigleCard( color: Colors.pinkAccent,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaa9G4WC3qX0CipEI8u8MXaA6C9Z6jyr9zbA&s', text: 'Licenciatura en Terapia Fisica' ),
+             _SigleCard(
+              color: Colors.deepPurple,
+              image: 'lib/img/terapia.jpg',
+              text: 'Licenciatura en Terapia Fisica',
+              onTap: () {
+                Navigator.pushNamed(context, 'terapiafisica_screen');
+              },
+            ),
+            
           ]
         ),
-
-
-        
 
         
 
