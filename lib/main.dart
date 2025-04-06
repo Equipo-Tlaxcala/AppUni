@@ -8,6 +8,7 @@ import 'package:disenos/screens/home_screen.dart';
 import 'package:disenos/screens/biotecnologia_screen.dart';
 import 'package:disenos/screens/software_screen.dart';
 import 'package:disenos/screens/terapiafisica_screen.dart';
+import 'package:disenos/screens/financiero_screen.dart';
 
 void main() => runApp(MyApp());
  
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         'software_screen': (_) => SoftwareScreen(), // Agregar esta línea
         'terapiafisica_screen': (_) => TerapiafisicaScreen(), // Agregar esta línea
         'uni_info_screen':(_) => UniInfoScreen(),
+        'financiero_screen':(_) => FinancieroScreen(),
       },
     );
   }
