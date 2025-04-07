@@ -30,8 +30,19 @@ class CardTable extends StatelessWidget {
 
         TableRow(
           children: [
-            _SigleCard( color: Colors.purple, image: 'https://i.ytimg.com/vi/1ZyELJFIReQ/sddefault.jpg',  text: 'Ingenieria Finaciera' ),
-            _SigleCard( color: Colors.purpleAccent, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyV1bf3v1mkvjQpASo2Brta6Jc5KQYCJ7rWg&s', text: 'Licenciatura en Administracion y Gestion Empresarial' ),
+            _SigleCard( 
+              color: Colors.purple, 
+              image: 'https://i.ytimg.com/vi/1ZyELJFIReQ/sddefault.jpg',  
+              text: 'Ingenieria Finaciera',
+              onTap: () {
+                Navigator.pushNamed(context, 'financiero_screen');
+              },
+            ),
+            _SigleCard( 
+              color: Colors.purpleAccent, 
+              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyV1bf3v1mkvjQpASo2Brta6Jc5KQYCJ7rWg&s', 
+              text: 'Licenciatura en Administracion y Gestion Empresarial' 
+            ),
           ]
         ),
 
