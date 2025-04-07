@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BiotecnologiaScreen extends StatelessWidget {
+class AdministracionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,7 +8,7 @@ class BiotecnologiaScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Ingeniería en Biotecnología'),
+            Text('Licenciatura en Administración'),
             Image.asset(
               'lib/img/images.png',
               height: 100,
@@ -27,7 +27,7 @@ class BiotecnologiaScreen extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 400),
                 child: Image.asset(
-                  'lib/img/biotecnologia2.jpg',
+                  'lib/img/aqdmin2.jpg',
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -53,7 +53,7 @@ class BiotecnologiaScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Ingeniería en Biotecnología',
+                      'Licenciatura en Administración y Gestión Empresarial',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -67,24 +67,20 @@ class BiotecnologiaScreen extends StatelessWidget {
                       children: [
                         _buildInfoSection(
                             'Descripción',
-                            'La ingeniería en biotecnología está orientada a diseñar y mejorar procesos tecnológicos basados en sistemas vivos. La Biotecnología permite aislar y manipular biomoléculas y microorganismos mediante el uso de técnicas de biología molecular, microbiología y bioquímica con el objeto de producir nuevos medicamentos, procesos, alimentos, y plantas.',
+                            'En la Licenciatura en Administración y Gestión Empresarial se formarán profesionistas altamente competitivos, que respondan a los desafíos a los que se enfrentan las empresas, dirigiendo eficazmente los recursos y funciones, así como diseñando, evaluando y aplicando estrategias que permitan cumplir los objetivos y metas establecidas en las organizaciones. ',
                             Icons.science),
                         _buildInfoSection(
                             'Objetivo',
-                            'Analizar, diseñar, evaluar, innovar y supervisar sistemas biológicos, fisicoquímicos, y tecnológicos para el control, producción, cumplimiento de normativas vigentes y solución de requerimientos ambientales, industriales, científicos y salud, aplicables al sector público y privado para elevar la competitividad bajo los estándares de calidad.',
+                            'Esta Licenciatura tiene como objetivo formar profesionistas con capacidades analíticas y gerenciales que le permitan proyectar una sólida visión de negocios en ambientes de incertidumbre y de competitividad internacional aplicando e innovando técnicas administrativas en las diferentes áreas de las organizaciones.',
                             Icons.track_changes),
                         _buildInfoSection(
-                            'Misión del Programa Educativo',
-                            'Formar profesionales éticos y con valores en el área de Ingeniería en Biotecnología apegados al modelo basado en competencias capaces de proponer soluciones a las problemáticas actuales con una sólida formación científica, tecnológica e innovación.',
-                            Icons.school),
-                        _buildInfoSection(
-                            'Visión del Programa Educativo',
-                            'El programa educativo de Ingeniería en Biotecnología es reconocido por la calidad de sus estudiantes ofreciéndoles planes y programas de estudio pertinentes y actualizados, mediante un modelo educativo basado en competencias, lo cual brinda a sus egresados las competencias necesarias para proponer soluciones a las necesidades de su entorno y a las exigencias del medio laboral en áreas relacionadas a la biotecnología, con responsabilidad social, ambiental y sustentable contribuyendo al desarrollo del estado.',
-                            Icons.visibility),
-                        _buildInfoSection(
                             'Perfil de Ingreso',
-                            'Para ingresar a la carrera de Ingeniería en Biotecnología se requiere: Haber concluido los estudios de bachillerato preferentemente en área físico-matemática o químico-biológica. Presentar y ser aceptado en el examen de ingreso. Los demás que marque la convocatoria de ingreso. Conocimientos previos de biología, química orgánica, matemáticas, física, inglés y computación.',
+                            'El aspirante a la carrera de Licenciatura Administración y Gestión Empresarial, deberá cumplir con las siguientes características: Habilidades matemáticas y razonamiento lógico Conocimientos básicos en el área de administración Conocimientos básicos en el área contable Capacidad organizativa Responsabilidad Liderazgo Capacidad emprendedora.',
                             Icons.person_outline),
+                        _buildInfoSection(
+                            'Perfil de Egreso',
+                            'El egresado será competente para: ejercer las funciones de consultoría en las empresas, proponer alternativas que permitan el desarrollo óptimo de las organizaciones, privilegiando las tecnologías de información aplicadas en el comercio y los negocios, mediante el manejo de manera circunstancial de las emociones en pro del desarrollo organizacional y crecimiento personal, con la búsqueda de soluciones mediante el trabajo en equipo y toma de decisiones.',
+                            Icons.school),
                       ],
                     ),
                     SizedBox(height: 24),
@@ -359,10 +355,9 @@ class BiotecnologiaScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 16),
                   ...[
-                    '01. Determinar las características de los procesos biotecnológicos.',
-                    '02. Manipular cultivos celulares para obtener productos de interés industrial.',
-                    '03. Desarrollar procesos biotecnológicos a escala industrial para el aprovechamiento rentable de los recursos biológicos a través de procesos sustentables.',
-                    '04. Investigar y reproducir proceso y productos biotecnológicos.'
+                    '01. Ejercer las funciones de consultoría en las empresas.',
+                    '02. Proponer alternativas que permita el desarrollo óptimo de las organizaciones.',
+                    '03. Aplicar tecnologías de Información en el comercio y los negocios.',
                   ]
                       .map((skill) => Padding(
                             padding: EdgeInsets.symmetric(vertical: 8),
@@ -481,86 +476,88 @@ class BiotecnologiaScreen extends StatelessWidget {
 
   Map<String, List<String>> _getCurriculumForBiotechnology() {
     return {
-      'Primer Cuatrimestre': [
+      'PRIMER CUATRIMESTRE': [
         '1. INGLÉS I',
-        '2. QUÍMICA BÁSICA',
-        '3. ÁLGEBRA LINEAL',
-        '4. QUÍMICA ORGÁNICA',
-        '5. FÍSICA PARA INGENIERÍA',
-        '6. BIOTECNOLOGÍA Y DESARROLLO SUSTENTABLE',
+        '2. DESARROLLO HUMANO Y VALORES',
+        '3. INTRODUCCIÓN A LAS MATEMÁTICAS',
+        '4. INTRODUCCIÓN A LA ADMINISTRACIÓN',
+        '5. INTRODUCCIÓN A LA CONTABILIDAD',
+        '6. MARCO LEGAL DE LAS ORGANIZACIONES',
         '7. EXPRESIÓN ORAL Y ESCRITA I'
       ],
-      'Segundo Cuatrimestre': [
+      'SEGUNDO CUATRIMESTRE': [
         '1. INGLÉS II',
-        '2. DESARROLLO HUMANO Y VALORES',
-        '3. FUNCIONES MATEMÁTICAS',
-        '4. PROBABILIDAD Y ESTADÍSTICA',
-        '5. QUÍMICA INORGÁNICA',
-        '6. BIOLOGÍA',
-        '7. QUÍMICA ANALÍTICA'
-      ],
-      'Tercer Cuatrimestre': [
-        '1. INGLÉS III',
         '2. INTELIGENCIA EMOCIONAL Y MANEJO DE CONFLICTOS',
-        '3. CÁLCULO DIFERENCIAL',
-        '4. FUNDAMENTOS DE MICROBIOLOGÍA',
-        '5. BIOQUÍMICA',
-        '6. TERMODINÁMICA',
-        '7. ANÁLISIS DE BIOPRODUCTOS'
+        '3. MATEMÁTICAS APLICADAS A LA ADMINISTRACIÓN',
+        '4. PROCESO ADMINISTRATIVO',
+        '5. CONTABILIDAD',
+        '6. DERECHO MERCANTIL',
+        '7. SISTEMAS DE INFORMACIÓN EN LAS ORGANIZACIONES'
       ],
-      'Cuarto Cuatrimestre': [
-        '1. INGLÉS IV',
+      'TERCER CUATRIMESTRE': [
+        '1. INGLÉS III',
         '2. HABILIDADES COGNITIVAS Y CREATIVIDAD',
-        '3. CÁLCULO INTEGRAL',
-        '4. BALANCE DE MATERIA Y ENERGÍA',
-        '5. MICROBIOLOGÍA AVANZADA',
-        '6. FISICOQUÍMICA',
+        '3. PROBABILIDAD Y ESTADÍSTICA',
+        '4. PLANEACIÓN ESTRATÉGICA EN LAS ORGANIZACIONES',
+        '5. CONTABILIDAD ADMINISTRATIVA',
+        '6. ECONOMÍA DE LA EMPRESA',
+        '7. METODOLOGÍA DE LA INVESTIGACIÓN'
+      ],
+      'CUARTO CUATRIMESTRE': [
+        '1. INGLÉS IV',
+        '2. ÉTICA PROFESIONAL',
+        '3. ADMINISTRACIÓN Y GESTIÓN DEL TALENTO HUMANO',
+        '4. CONTABILIDAD DE COSTOS – PRODUCTOS',
+        '5. FUNDAMENTOS DE MERCADOTÉCNIA',
+        '6. AGREGADOS ECONÓMICOS',
         '7. ESTANCIA I'
       ],
-      'Quinto Cuatrimestre': [
+      'QUINTO CUATRIMESTRE': [
         '1. INGLÉS V',
-        '2. ÉTICA PROFESIONAL',
-        '3. MATEMÁTICAS PARA INGENIERÍA I',
-        '4. BIOCATÁLISIS',
-        '5. FUNDAMENTOS DE BIOPROCESOS',
-        '6. FENÓMENOS DE TRANSPORTE',
-        '7. BIOLOGÍA MOLECULAR'
-      ],
-      'Sexto Cuatrimestre': [
-        '1. INGLÉS VI',
         '2. HABILIDADES GERENCIALES',
-        '3. MATEMÁTICAS PARA INGENIERÍA II',
-        '4. OPERACIONES UNITARIAS',
-        '5. INGENIERÍA DE BIORREACTORES',
-        '6. CONTROL ESTADÍSTICO',
-        '7. INGENIERÍA GENÉTICA'
+        '3. MATEMÁTICAS FINANCIERAS',
+        '4. COMPORTAMIENTO Y DESARROLLO EMPRESARIAL',
+        '5. CONTABILIDAD DE COSTOS – SERVICIOS',
+        '6. INVESTIGACIÓN DE MERCADOS',
+        '7. LEGISLACIÓN LABORAL'
       ],
-      'Séptimo Cuatrimestre': [
-        '1. INGLÉS VII',
+      'SEXTO CUATRIMESTRE': [
+        '1. INGLÉS VI',
         '2. LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO',
-        '3. BIOINFORMÁTICA',
-        '4. INGENIERÍA DE BIOPROCESOS',
-        '5. INGENIERÍA DE PROYECTOS',
-        '6. ESTANCIA II'
+        '3. ECONOMETRÍA',
+        '4. ADMINISTRACIÓN FINANCIERA',
+        '5. ADMINISTRACIÓN DE SUELDOS Y SALARIOS',
+        '6. MERCADOTECNIA ESTRATÉGICA',
+        '7. ADMINISTRACIÓN DE LA CALIDAD'
       ],
-      'Octavo Cuatrimestre': [
+      'SÉPTIMO CUATRIMESTRE': [
+        '1. INGLÉS VII',
+        '2. COMERCIO INTERNACIONAL',
+        '3. SUSTENTABILIDAD',
+        '4. CONTRIBUCIONES FISCALES',
+        '5. ADMINISTRACIÓN DE LA PRODUCCIÓN',
+        '6. TECNOLOGÍAS DE LA INFORMACIÓN APLICADA A LOS NEGOCIOS',
+        '7. ESTANCIA II'
+      ],
+      'OCTAVO CUATRIMESTRE': [
         '1. INGLÉS VIII',
-        '2. BIOSEGURIDAD E HIGIENE',
-        '3. CONTROL DE BIOPROCESOS',
-        '4. METABOLÓMICA',
-        '5. CONTROL DE CALIDAD',
-        '6. BIOTECNOLOGÍA AMBIENTAL',
-        '7. BIOTECNOLOGÍA AGROPECUARIA'
+        '2. NEGOCIACIÓN Y TOMA DE DECISIONES EMPRESARIALES',
+        '3. EMPRENDIMIENTO',
+        '4. AUDITORÍA ADMINISTRATIVA',
+        '5. FORMULACIÓN DE PROYECTOS',
+        '6. LOGÍSTICA ADMINISTRATIVA',
+        '7. RESPONSABILIDAD SOCIAL EMPRESARIAL'
       ],
-      'Noveno Cuatrimestre': [
+      'NOVENO CUATRIMESTRE': [
         '1. INGLÉS IX',
-        '2. MEJORA DE BIOPROCESOS',
-        '3. BIOTECNOLOGÍA EN ALIMENTOS',
-        '4. BIOTECNOLOGÍA MÉDICOFARMACÉTICA',
-        '5. GESTIÓN DE PROYECTOS',
-        '6. EXPRESIÓN ORAL Y ESCRITA II'
+        '2. ADMINISTRACIÓN DE REDES EMPRESARIALES',
+        '3. CONSULTORÍA',
+        '4. GESTIÓN DE MARCA',
+        '5. GESTIÓN Y EVALUACIÓN DE PROYECTOS',
+        '6. EXPRESIÓN ORAL Y ESCRITA II',
+        '7. COMERCIALIZACIÓN INTERNACIONAL'
       ],
-      'Décimo Cuatrimestre': ['1. ESTADÍA PROFESIONAL'],
+      'DÉCIMO CUATRIMESTRE': ['1. ESTADÍA PROFESIONAL'],
     };
   }
 
