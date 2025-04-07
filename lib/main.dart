@@ -1,3 +1,4 @@
+import 'package:disenos/screens/biomedica_screen.dart';
 import 'package:disenos/screens/uni_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         'software_screen': (_) => SoftwareScreen(), // Agregar esta línea
         'terapiafisica_screen': (_) => TerapiafisicaScreen(), // Agregar esta línea
         'uni_info_screen':(_) => UniInfoScreen(),
+        'biomedica_screen':(_) => BiomedicaScreen(),
       },
     );
   }

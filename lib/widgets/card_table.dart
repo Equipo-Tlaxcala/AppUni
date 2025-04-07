@@ -17,7 +17,14 @@ class CardTable extends StatelessWidget {
                 Navigator.pushNamed(context, 'software_screen');
               },
             ),
-            _SigleCard( color: Colors.pinkAccent,image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaMOvuwsfNZweOm_YX1o-Ia_QyRUqwJpVTDw&s',  text: 'Ingenieria en Biomedica' ),
+            _SigleCard(
+              color: Colors.deepPurple,
+              image: 'assets/img/biomedica.png',
+              text: 'Licenciatura en Biomedica',
+              onTap: () {
+                Navigator.pushNamed(context, 'biomedica_screen');
+              },
+            ),
           ]
         ),
 
@@ -219,9 +226,10 @@ class _SigleCard extends StatelessWidget {
           '1. INGLÉS I',
           '2. DESARROLLO HUMANO Y VALORES',
           '3. FUNDAMENTOS MATEMÁTICOS',
-          '4. BIOLOGÍA CELULAR',
-          '5. FÍSICA',
-          '6. QUÍMICA'
+          '4. FÍSICA',
+          '5. INTRODUCCIÓN A LA INGENIERÍA BIOMÉDICA',
+          '6. QUÍMICA APLICADA A LA INGENIERÍA',
+          '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
         ]
       },
       'Ingenieria Finaciera': {
