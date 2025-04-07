@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
         'home_screen': (_) => HomeScreen(),
         'biotecnologia_screen': (_) => BiotecnologiaScreen(),
         'software_screen': (_) => SoftwareScreen(), // Agregar esta línea
-
         'terapiafisica_screen': (_) =>
             TerapiafisicaScreen(), // Agregar esta línea
         'uni_info_screen': (_) => UniInfoScreen(),
