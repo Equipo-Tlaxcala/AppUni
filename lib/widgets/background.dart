@@ -10,8 +10,8 @@ class Background extends StatelessWidget {
         end: Alignment.bottomCenter,
         stops: [0.2, 0.8],
         colors: [
-          Color.fromARGB(255, 197, 133, 15),
-          Color.fromARGB(255, 181, 202, 25)
+          Color.fromRGBO(55, 57, 84, 1.0),
+          Color.fromRGBO(62, 66, 107, 0.9)
         ]
       )
   );
@@ -20,7 +20,7 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Purple Gradinet
+        // Purple Gradient
         Container(decoration: boxDecoration ),
 
         // Pink box
@@ -47,8 +47,8 @@ class _PinkBox extends StatelessWidget {
           borderRadius: BorderRadius.circular(80),
           gradient: LinearGradient(
             colors: [
-              Color.fromRGBO(232, 169, 61, 1),
-              Color.fromRGBO(230, 172, 12, 1),
+              Color.fromRGBO(72, 76, 127, 1),
+              Color.fromRGBO(82, 86, 137, 0.7),
             ]
           )
         ),
