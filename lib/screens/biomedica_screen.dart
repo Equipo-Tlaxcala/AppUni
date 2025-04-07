@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-class SoftwareScreen extends StatelessWidget {
+class BiomedicaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,9 +8,9 @@ class SoftwareScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Ingenieria En Software'),
+            Text('Ingeniería Biomédica'),
             Image.asset(
-              '/upqroo2.png',
+              'lib/img/images.png',
               height: 100,
               width: 100,
             ),
@@ -28,11 +27,11 @@ class SoftwareScreen extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 400),
                 child: Image.asset(
-                  'assets/software.png',
+                  '/img/biomedica.png',
                   height: 200,
                   width: double.infinity,
-                  fit: BoxFit.contain, // Changed from BoxFit.cover to BoxFit.contain
-                  alignment: Alignment.center, // Changed from Alignment.topCenter to Alignment.center
+                  fit: BoxFit.contain,
+                  alignment: Alignment.center,
                 ),
               ),
             ),
@@ -54,7 +53,7 @@ class SoftwareScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Ingenieria En Software',
+                      'Ingeniería Biomédica',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -68,22 +67,22 @@ class SoftwareScreen extends StatelessWidget {
                       children: [
                         _buildInfoSection(
                           'Descripción',
-                          'En la carrera de Ingeniería en Software, el profesionista estará facultado para diseñar, desarrollar y mejorar la calidad de productos de software; especificar los métodos y las herramientas para aumentar la productividad de los desarrolladores de software; controlar los procesos de manera eficiente; aplicar los estándares internacionales para construir software de alta calidad.',
+                          'La carrera de ingeniería Biomédica se puede definir como la aplicación de la ingeniería al servicio de la salud y se caracteriza por la confluencia de conocimientos de áreas como la Biología, Medicina, Física, Química, Matemáticas, Electrónica, informática e Ingeniería con el propósito de desarrollar aplicaciones tecnológicas para la mejora de la salud y la calidad de vida de la población.',
                           Icons.science
                         ),
                         _buildInfoSection(
                           'Objetivo',
-                          'Aplicar métodos y técnicas para resolver los problemas de construcción y de proyectos informáticos, específicamente de desarrollo de software, utilizando normas, metodologías, procedimientos y herramientas modernas y estandarizadas.',
+                          'Analizar, diseñar, evaluar, innovar y supervisar sistemas biológicos, fisicoquímicos, y tecnológicos para el control, producción, cumplimiento de normativas vigentes y solución de requerimientos ambientales, industriales, científicos y salud, aplicables al sector público y privado para elevar la competitividad bajo los estándares de calidad.',
                           Icons.track_changes
                         ),
                         _buildInfoSection(
                           'Perfil de Ingreso',
-                          'Los alumnos interesados en ingresar a la Ingeniería en Software deberán cumplir con:\n1. Bachillerato terminado en cualquiera de sus modalidades (General, Técnico ó Propedéutico en Ciencias Físico-Matemáticas).\n2. Amplio sentido de responsabilidad, orden y disciplina.\n3. Conocimientos básicos sobre computación y razonamiento lógico matemático.',
+                          'El aspirante a ingresar en el programa educativo de Ingeniería Biomédica deberá tener bases académicas sólidas en el área físico-matemática del nivel medio superior, conocimientos básicos de electrónica, química, biología e informática, habilidades para comunicarse correctamente de manera oral y escrita, mostrar interés por contribuir a mejorar la calidad de vida de las personas, mediante el uso y desarrollo de nueva tecnología aplicada a la medicina.',
                           Icons.person_outline
                         ),
                         _buildInfoSection(
                           'Perfil de Egreso',
-                          'El Ingeniero en Software egresado de las Universidades Politécnicas, tiene una formación integral basada en competencias, con conocimientos, actitudes, habilidades y destrezas para automatizar procesos mediante el diseño, desarrollo o actualización de sistemas de software, lo que le permite interactuar en diferentes campos de acción y desempeñarse mejor en la empresa, institución u organizaron pública o privada de los sectores industrial, comercial y de servicios.',
+                          'El ingeniero Biomédico se caracteriza por su formación multidisciplinaria, que le permite identificar, diagnosticar, reparar, diseñar, mejorar y proponer alternativas de solución a las necesidades y requerimientos en el área de instrumentación y apoyo tecnológico en el área médica, con criterio investigativo e innovador y principios éticos, filosóficos y humanísticos. Es un profesional capacitado para dirigir, intervenir y asesorar en el funcionamiento de centros hospitalarios. El ingeniero egresado contará con los conocimientos y experiencia necesaria para el uso de equipos biomédicos.',
                           Icons.person_outline
                         ),
                       ],
@@ -183,7 +182,7 @@ class SoftwareScreen extends StatelessWidget {
                                   ),
                                   SizedBox(height: 4),
                                   Text(
-                                    '4 años',
+                                    '3 años y 4 meses',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
@@ -218,7 +217,7 @@ class SoftwareScreen extends StatelessWidget {
   }
 
   Widget _buildCurriculumMap() {
-    final curriculum = _getCurriculumForSoftware();
+    final curriculum = _getCurriculumForBiomedica();
     String selectedQuarter = curriculum.keys.first;
 
     return StatefulBuilder(
@@ -357,10 +356,10 @@ class SoftwareScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 16),
-                  ...['01. Desarrollar, mantener y optimizar software utilizando metodologías y tecnologías actuales.',
-                      '02. Gestionar proyectos de software aplicando estándares internacionales de calidad.',
-                      '03. Diseñar e implementar bases de datos y sistemas de información.',
-                      '04. Aplicar principios de seguridad informática en el desarrollo de aplicaciones.'
+                  ...['01. Diseñar, mantener y reparar equipos médicos y sistemas biomédicos.',
+                      '02. Gestionar tecnologías médicas y procesos hospitalarios.',
+                      '03. Desarrollar instrumentación biomédica y sistemas de monitoreo.',
+                      '04. Aplicar principios de ingeniería para resolver problemas en el ámbito de la salud.'
                   ].map((skill) => Padding(
                     padding: EdgeInsets.symmetric(vertical: 8),
                     child: Row(
@@ -475,85 +474,105 @@ class SoftwareScreen extends StatelessWidget {
     );
   }
 
-  Map<String, List<String>> _getCurriculumForSoftware() {
+  Map<String, List<String>> _getCurriculumForBiomedica() {
     return {
       'Primer Cuatrimestre': [
         '1. INGLÉS I',
         '2. DESARROLLO HUMANO Y VALORES',
         '3. FUNDAMENTOS MATEMÁTICOS',
-        '4. FUNDAMENTOS DE REDES',
-        '5. FÍSICA',
-        '6. FUNDAMENTOS DE PROGRAMACIÓN',
+        '4. FÍSICA',
+        '5. INTRODUCCIÓN A LA INGENIERÍA BIOMÉDICA',
+        '6. QUÍMICA APLICADA A LA INGENIERÍA',
         '7. COMUNICACIÓN Y HABILIDADES DIGITALES'
       ],
       'Segundo Cuatrimestre': [
         '1. INGLÉS II',
         '2. HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS',
         '3. CÁLCULO DIFERENCIAL',
-        '4. CONMUTACIÓN Y ENRUTAMIENTO DE REDES',
-        '5. PROBABILIDAD Y ESTADÍSTICA',
-        '6. PROGRAMACIÓN ESTRUCTURADA',
-        '7. SISTEMAS OPERATIVOS'
+        '4. FUNDAMENTOS DE ELECTRÓNICA',
+        '5. TECNOLOGÍA HOSPITALARIA',
+        '6. BIOQUÍMICA',
+        '7. PROBABILIDAD Y ESTADÍSTICA'
       ],
       'Tercer Cuatrimestre': [
         '1. INGLÉS III',
-        '2. DESARROLLO DELPENSAMIENTO Y TOMA DE DECISIONES',
+        '2. DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES',
         '3. CÁLCULO INTEGRAL',
-        '4. TÓPICOS DE CALIDAD PARA EL DISEÑO DE SOFTWARE',
-        '5. BASES DE DATOS',
-        '6. PROGRAMACIÓN ORIENTADA A OBJETOS',
-        '7. PROYECTO INTEGRADOR I'
+        '4. ELECTRÓNICA PARA INGENIERÍA',
+        '5. FUNDAMENTOS DE INGENIERÍA CLÍNICA',
+        '6. FUNDAMENTOS ANATOMÍA Y FISIOLOGÍA',
+        '7. ADMINISTRACIÓN DE RECURSOS HOSPITALARIOS'
       ],
       'Cuarto Cuatrimestre': [
         '1. INGLÉS IV',
         '2. ÉTICA PROFESIONAL',
         '3. CÁLCULO DE VARIAS VARIABLES',
-        '4. APLICACIONES WEB',
-        '5. ESTRUCTURA DE DATOS',
-        '6. DESARROLLO DE APLICACIONES MÓVILES',
-        '7. ANÁLISIS Y DISEÑO DE SOFTWARE'
+        '4. ELECTRÓNICA ANALÓGICA',
+        '5. INGENIERÍA CLÍNICA',
+        '6. ANATOMÍA Y FISIOLOGÍA PARA INGENIERÍA',
+        '7. ELECTRÓNICA DIGITAL'
       ],
       'Quinto Cuatrimestre': [
         '1. INGLÉS V',
-        '2. LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO',
-        '3. ECUACIONES DIFERENCIALES',
-        '4. APLICACIONES WEB ORIENTADAS A SERVICIOS',
-        '5. BASES DE DATOS AVANZADAS',
-        '6. ESTÁNDARES Y MÉTRICAS PARA EL DESARROLLO DE SOFTWARE',
-        '7. PROYECTO INTEGRADOR II'
+        '2. ÉTICA PROFESIONAL',
+        '3. CÁLCULO DE VARIAS VARIABLES',
+        '4. ELECTRÓNICA ANALÓGICA',
+        '5. INGENIERÍA CLÍNICA',
+        '6. ANATOMÍA Y FISIOLOGÍA PARA INGENIERÍA',
+        '7. ELECTRÓNICA DIGITAL'
       ],
       'Sexto Cuatrimestre': [
-        '1. ESTADÍA TÉCNICO SUPERIOR UNIVERSITARIO EN DESARROLLO DE SOFTWARE MULTIPLATAFORMA'
-      ],
-      'Séptimo Cuatrimestre': [
         '1. INGLÉS VI',
         '2. HABILIDADES GERENCIALES',
-        '3. FORMULACIÓN DE PROYECTOS DE TECNOLOGÍA',
-        '4. FUNDAMENTOS DE INTELIGENCIA ARTIFICIAL',
-        '5. ÉTICA Y LEGISLACIÓN EN TECNOLOGÍAS DE LA INFORMACIÓN',
-        '6. OPTATIVA I',
-        '7. SEGURIDAD INFORMÁTICA'
+        '3. SERIES Y TRANSFORMADAS',
+        '4. ELECTRÓNICA DE POTENCIA',
+        '5. METROLOGÍA',
+        '6. PROGRAMACIÓN ORIENTADA A OBJETOS',
+        '7. BASE DE DATOS'
+      ],
+      'Séptimo Cuatrimestre': [
+        '1. INGLÉS VII',
+        '2. REGULACIÓN SANITARIA',
+        '3. SENSORES Y ACTUADORES',
+        '4. SISTEMAS DE CONTROL',
+        '5. MANTENIMIENTO DE EQUIPO MÉDICO',
+        '6. ANÁLISIS DE DATOS'
       ],
       'Octavo Cuatrimestre': [
-        '1. INGLÉS VII',
-        '2. ELECTRÓNICA DIGITAL',
-        '3. GESTIÓN DE PROYECTOS DE TECNOLOGÍA',
-        '4. PROGRAMACIÓN PARA INTELIGENCIA ARTIFICIAL',
-        '5. ADMINISTRACIÓN DE SERVIDORES',
-        '6. OPTATIVA II',
-        '7. INFORMÁTICA FORENSE'
+        '1. INGLÉS VIII',
+        '2. ESCENARIO DE MANTENIMIENTO',
+        '3. PRÁCTICAS DE MANTENIMIENTO',
+        '4. INSTALACIONES ELÉCTRICAS EN SALUD',
+        '5. PROCESAMIENTO DE SEÑALES BIOMÉDICAS',
+        '6. SISTEMAS EMBEBIDOS',
+        '7. PROYECTO INTEGRADOR II'
       ],
       'Noveno Cuatrimestre': [
-        '1. INGLÉS VIII',
-        '2. INTERNET DE LAS COSAS',
-        '3. EVALUACIÓN DE PROYECTOS DE TECNOLOGÍA',
-        '4. CIENCIA DE DATOS',
-        '5. TECNOLOGÍAS DISRUPTIVAS',
-        '6. OPTATIVA III',
-        '7. PROYECTO INTEGRADOR III'
+        '1. INGLÉS TÉCNICO',
+        '2. INNOVACIÓN TECNOLÓGICA EN SALUD',
+        '3. INVESTIGACIÓN BIOMÉDICA',
+        '4. PROTOCOLOS E INTERFACES DE COMUNICACIÓN',
+        '5. FUNDAMENTOS DE BIOINSTRUMENTACIÓN',
+        '6. MANUFACTURA ASISTIDA POR COMPUTADORA',
+        '7. PROCESAMIENTO DE IMÁGENES MÉDICAS'
       ],
       'Décimo Cuatrimestre': [
-        '1. ESTADÍA LICENCIATURA EN INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN E INNOVACIÓN DIGITAL',
+        '1. EMPRENDIMIENTO Y DESARROLLO DE NEGOCIOS',
+        '2. FÍSICA MÉDICA',
+        '3. DESARROLLO DE SISTEMAS BIOMÉDICOS',
+        '4. TELESALUD',
+        '5. BIOINSTRUMENTACIÓN',
+        '6. BIOMECÁNICA',
+        '7. BIOMATERIALES'
+      ],
+      'Onceavo Cuatrimestre': [
+        '1. ESCENARIO DE PRÁCTICAS',
+        '2. MERCADOTECNIA EN SALUD',
+        '3. INGENIERÍA DE REHABILITACIÓN',
+        '4. PROYECTO INTEGRADOR III'
+      ],
+      'Doceavo Cuatrimestre': [
+        '1. ESTADÍA LICENCIATURA EN INGENIERÍA BIOMÉDICA'
       ],
     };
   }
